@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/icon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Валентинка</title>  
+    <main class="main">
+        <div class="wrap-m">
+            <div class="top">
+                <form class="login-form" id="loginForm" action="#" method="post">
+                    <label for="username">Логин:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" required>
+                    <button type="submit">Войти</button>
+                </form>
+                <script>
+                    document.getElementById('loginForm').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const username = document.getElementById('username').value;
+                        const password = document.getElementById('password').value;
+                        if (username === 'hdhd' && password === '1234') {
+                            window.location.href = 'index.html';
+                        } else {
+                            alert('Неверный логин или пароль!');
+                        }
+                    });
+                </script>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
